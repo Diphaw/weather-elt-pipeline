@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_weather
+    description: "Tabel staging hasil parsing payload JSON mentah cuaca"
+    columns:
+      - name: raw_id
+        tests:
+          - not_null
+      - name: city
+        tests:
+          - not_null
+      - name: temperature_celsius
+        tests:
+          - not_null
+      - name: humidity_pct
+        tests:
+          - not_null
